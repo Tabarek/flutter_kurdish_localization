@@ -362,5 +362,5 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   String get shareButtonLabel => 'هاوبەشکردن';
   
   @override
-  String get clearButtonLabel => "";
+  String get clearButtonLabel => 'پاککردن'; // or 'Clear'
 }
