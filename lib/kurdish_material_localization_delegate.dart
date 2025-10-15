@@ -571,19 +571,6 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   
   @override
   String get selectedDateLabel => "";
-
-  @override
-  String get reorderItemUp => 'بردن بۆ سەرەوە';
-  @override
-  String get reorderItemDown => 'بردن بۆ خوارەوە';
-  @override
-  String get reorderItemLeft => 'بردن بۆ چەپ';
-  @override
-  String get reorderItemRight => 'بردن بۆ ڕاست';
-  @override
-  String get reorderItemToStart => 'بردن بۆ سەرەتا';
-  @override
-  String get reorderItemToEnd => 'بردن بۆ کۆتایی';
 }
 
 const kuDateSymbols = {
