@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:flutter/widgets.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class _KurdishMaterialLocalizationsDelegate
     extends LocalizationsDelegate<WidgetsLocalizations> {
@@ -46,4 +46,26 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
 
   @override
   String get reorderItemUp => throw UnimplementedError();
+
+  // 🛠️ NEW MISSING OVERRIDES (from error log)
+  @override
+  String get copyButtonLabel => 'کۆپی';
+
+  @override
+  String get cutButtonLabel => 'بڕین';
+
+  @override
+  String get lookUpButtonLabel => 'گەڕان';
+
+  @override
+  String get pasteButtonLabel => 'پەیست';
+
+  @override
+  String get searchWebButtonLabel => 'گەڕان لە وێب';
+
+  @override
+  String get selectAllButtonLabel => 'هەموو هەڵبژێرە';
+
+  @override
+  String get shareButtonLabel => 'هاوبەشکردن';
 }

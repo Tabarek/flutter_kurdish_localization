@@ -1,5 +1,4 @@
-// **COPY AND PASTE THIS ENTIRE CORRECTED CODE INTO THE FILE IN YOUR FORK**
-// File: lib/kurdish_material_localization_delegate.dart
+// **COPY AND PASTE THIS ENTIRE CODE BLOCK into lib/kurdish_material_localization_delegate.dart**
 
 import 'dart:async';
 
@@ -23,8 +22,10 @@ class _KurdishMaterialLocalizationsDelegate
 
     date_symbol_data_custom.initializeDateFormattingCustom(
       locale: localeName,
-      patterns: kuLocaleDatePatterns, // Assuming kuLocaleDatePatterns is defined elsewhere
-      symbols: intl.DateSymbols.deserializeFromMap(kuDateSymbols), // Assuming kuDateSymbols is defined elsewhere
+      patterns:
+          kuLocaleDatePatterns, // Assuming kuLocaleDatePatterns is defined below
+      symbols: intl.DateSymbols.deserializeFromMap(
+          kuDateSymbols), // Assuming kuDateSymbols is defined below
     );
     return SynchronousFuture<MaterialLocalizations>(
       KurdishMaterialLocalizations(
@@ -68,7 +69,7 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
             yearMonthFormat: yearMonthFormat,
             decimalFormat: decimalFormat,
             twoDigitZeroPaddedFormat: twoDigitZeroPaddedFormat);
-            
+
   static const LocalizationsDelegate<MaterialLocalizations> delegate =
       _KurdishMaterialLocalizationsDelegate();
 
@@ -350,16 +351,16 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
 
   @override
   String get lastPageTooltip => 'دوایین لاپه‌ڕه‌';
-  
-  // FIX: Added missing overrides from newer Flutter versions
+
+  // FIX: Added missing overrides from newer Flutter versions (with translations)
   @override
-  String get lookUpButtonLabel => 'Look Up'; // TODO: Translate
+  String get lookUpButtonLabel => 'گەڕان';
 
   @override
-  String get searchWebButtonLabel => 'Search Web'; // TODO: Translate
-  
+  String get searchWebButtonLabel => 'گەڕان لە وێب';
+
   @override
-  String get shareButtonLabel => 'Share'; // TODO: Translate
+  String get shareButtonLabel => 'هاوبەشکردن';
 
   // FIX: Added missing keyboard overrides from newer Flutter versions
   @override
@@ -493,6 +494,62 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
 
   @override
   String get keyboardKeySpace => "Space";
+
+  // 🛠️ NEW MISSING OVERRIDES (from error log)
+
+  @override
+  String get scrimOnTapHintRaw => 'بۆشکردنەوەی \$reason';
+
+  @override
+  String get bottomSheetLabel => 'پەڕەی خوارەوە';
+
+  @override
+  String get clearButtonTooltip => 'پاککردنەوە';
+
+  @override
+  String get collapsedHint => 'فراوانکراو';
+
+  @override
+  String get currentDateLabel => 'بەرواری ئێستا';
+
+  @override
+  String get expandedHint => 'نوشتاوە';
+
+  @override
+  String get expansionTileCollapsedHint => 'دوو کرتە بۆ فراوانکردن';
+
+  @override
+  String get expansionTileCollapsedTapHint => 'فراوانکردن بۆ زانیاری زیاتر';
+
+  @override
+  String get expansionTileExpandedHint => 'دوو کرتە بۆ نۆشتاوە';
+
+  @override
+  String get expansionTileExpandedTapHint => 'نوشتانەوە';
+
+  @override
+  String get keyboardKeyMetaMacOs => 'فەرمان';
+
+  @override
+  String get keyboardKeyMetaWindows => 'ویندۆز';
+
+  @override
+  String get keyboardKeyShift => 'شیفت';
+
+  @override
+  String get menuBarMenuLabel => 'پێڕستی هێڵی سەرەوە';
+
+  @override
+  String get menuDismissLabel => 'وازهێنان لە پەیڕست';
+
+  @override
+  String get scanTextButtonLabel => 'پشکنینی دەق';
+
+  @override
+  String get scrimLabel => 'داخستن';
+
+  @override
+  String get selectedDateLabel => 'بەرواری دیاریکراو';
 }
 
 // Dummy data to prevent other compilation errors, assuming they are defined elsewhere in the package.
@@ -500,14 +557,108 @@ const kuDateSymbols = {
   'NAME': "ku",
   'ERAS': ['BC', 'AD'],
   'ERANAMES': ['Before Christ', 'Anno Domini'],
-  'NARROWMONTHS': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-  'STANDALONENARROWMONTHS': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-  'MONTHS': ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-  'STANDALONEMONTHS': ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-  'SHORTMONTHS': ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-  'STANDALONESHORTMONTHS': ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-  'WEEKDAYS': ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-  'STANDALONEWEEKDAYS': ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+  'NARROWMONTHS': [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    '11',
+    '12'
+  ],
+  'STANDALONENARROWMONTHS': [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    '11',
+    '12'
+  ],
+  'MONTHS': [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ],
+  'STANDALONEMONTHS': [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ],
+  'SHORTMONTHS': [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec'
+  ],
+  'STANDALONESHORTMONTHS': [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec'
+  ],
+  'WEEKDAYS': [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday'
+  ],
+  'STANDALONEWEEKDAYS': [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday'
+  ],
   'SHORTWEEKDAYS': ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
   'STANDALONESHORTWEEKDAYS': ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
   'NARROWWEEKDAYS': ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
